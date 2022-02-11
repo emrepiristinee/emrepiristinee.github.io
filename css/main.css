@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+main{
+    min-height: 95vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    max-width: 350px;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+.suv {
+    background-color: var(--dark-cyan);
+}
+.luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+/* content */
+img{
+    padding: 2em 0px 0px 2em;
+}
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2em 0px 0px 1em;
+}
+p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 2em 0px 0px 1.5em;
+    line-height: 2;
+}
+h1, p {
+    color: var(--transparent-white);
+}
+
+main a {
+    display: inline-block;
+    background-color: var(--very-light-gray);
+    text-decoration: none;
+    border: 1px var(--very-light-gray) solid;
+    border-radius: 35px;
+    padding: 10px 30px;
+    margin: 4em 0em 4em 2em;
+    transition: color 0.5s;
+}
+.sedans a {
+    color: var(--bright-orange);
+}
+.sedans a:hover {
+    background: var(--bright-orange);
+    color: #fff;
+}
+.suv a {
+    color: var(--dark-cyan);
+}
+.suv a:hover {
+    background: var(--dark-cyan);
+    color: #fff;
+}
+
+.luxury a {
+    color: var(--very-dark-cyan);
+}
+.luxury a:hover {
+    background: var(--very-dark-cyan);
+    color: #fff;
+}
+
+/* Footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: green;
+    text-decoration: none;
+}
+
+
+@media (min-width:992px){ /*width minimum 992 boyutuna küçülene kadar aşağıdaki kodlar çalışsın */
+    section{
+        min-width: 992px;
+        display: flex;
+    }
+    .luxury, .sedans{
+        border-radius: 0;
+    }
+    .sedans {
+        background-color: var(--bright-orange);
+        border-top-left-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+    }
+    .suv {
+        background-color: var(--dark-cyan);
+    }
+    .luxury {
+        background-color: var(--very-dark-cyan);
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+    }
+}
